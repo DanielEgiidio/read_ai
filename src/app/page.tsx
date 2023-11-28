@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default async function Home() {
   const {userId} = await auth()
-  const isAuth = !userId
+  const isAuth = !!userId;
   
 
   return (
@@ -15,7 +15,7 @@ export default async function Home() {
         <div className="flex flex-col items-center text-center">
           <div className="flex items-center">
             <h1 className="mr-3 text-5xl font-semibold text-slate-300">Interaja facilmente com PDFs</h1>
-            <UserButton afterSignOutUrl="/" />
+            <UserButton  afterSignOutUrl="/" />
         </div>
 
         <div className="flex mt-4">
